@@ -23,20 +23,6 @@ class Chat extends Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      activeTab: 1
-    };
-
-
-    this.onEntering = this.onEntering.bind(this);
-    this.onEntered = this.onEntered.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-    this.toggle = this.toggle.bind(this);
-    this.toggleAccordion = this.toggleAccordion.bind(this);
-    this.toggleCustom = this.toggleCustom.bind(this);
-    this.toggleFade = this.toggleFade.bind(this);
     this.state = {
       collapse: false,
       accordion: [true, false, false],
@@ -47,25 +33,6 @@ class Chat extends Component {
     };
   }
 
-  onEntering() {
-    this.setState({status: 'Opening...'});
-  }
-
-  onEntered() {
-    this.setState({status: 'Opened'});
-  }
-
-  onExiting() {
-    this.setState({status: 'Closing...'});
-  }
-
-  onExited() {
-    this.setState({status: 'Closed'});
-  }
-
-  toggle() {
-    this.setState({collapse: !this.state.collapse});
-  }
 
   toggleAccordion(tab) {
 
@@ -75,28 +42,6 @@ class Chat extends Component {
     this.setState({
       accordion: state,
     });
-  }
-
-  toggleCustom(tab) {
-
-    const prevState = this.state.custom;
-    const state = prevState.map((x, index) => tab === index ? !x : false);
-
-    this.setState({
-      custom: state,
-    });
-  }
-
-  toggleFade() {
-    this.setState({fadeIn: !this.state.fadeIn});
-  }
-
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      });
-    }
   }
 
   render() {
@@ -143,7 +88,7 @@ class Chat extends Component {
               <CardHeader>
                 <i className="fa fa-align-justify"></i><strong>Danh bạ</strong>
                 <div className="card-header-actions">
-                  <i class="fa fa-wechat fa-lg"></i>
+                  <i className="fa fa-wechat fa-lg"></i>
                 </div>
               </CardHeader>
 
@@ -154,7 +99,7 @@ class Chat extends Component {
                       <CardHeader id="headingOne">
                         <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)}
                                 aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
-                          <h6><i class="fa fa-minus-square-o fa-lg"></i>&nbsp;&nbsp;<span className="m-0 p-0">I65</span></h6>
+                          <h6><i className="fa fa-minus-square-o fa-lg"></i>&nbsp;&nbsp;<span className="m-0 p-0">I65</span></h6>
                         </Button>
                       </CardHeader>
                       <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne"
@@ -195,7 +140,7 @@ class Chat extends Component {
                       <CardHeader id="headingOne">
                         <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(1)}
                                 aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
-                          <h6><i class="fa fa-minus-square-o fa-lg"></i>&nbsp;&nbsp;<span className="m-0 p-0">I65</span></h6>
+                          <h6><i className="fa fa-minus-square-o fa-lg"></i>&nbsp;&nbsp;<span className="m-0 p-0">I65</span></h6>
                         </Button>
                       </CardHeader>
                       <Collapse isOpen={this.state.accordion[1]} data-parent="#accordion" id="collapseOne"
