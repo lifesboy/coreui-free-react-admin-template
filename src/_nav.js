@@ -37,6 +37,11 @@ export default {
       },
     },
     {
+      name: 'Chat',
+      url: '/chat',
+      icon: 'icon-puzzle',
+    },
+    {
       name: 'Base',
       url: '/base',
       icon: 'icon-puzzle',

@@ -1,4 +1,5 @@
 import React from 'react';
+import Chat from "./views/Chat/Chat";
 
 const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
 const Cards = React.lazy(() => import('./views/Base/Cards'));
@@ -79,6 +80,8 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+
+  { path: '/chat', name: 'Chat Demo', component: Chat },
 ];
 
 export default routes;
