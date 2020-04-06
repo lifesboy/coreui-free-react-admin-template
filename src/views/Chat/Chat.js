@@ -144,7 +144,7 @@ class Chat extends Component {
 
               <CardBody>
                 <ListGroup style={{overflowY: 'scroll', minHeight: '500px'}}>
-                  <ListGroupItem>
+                  <ListGroupItem style={{border: 'none'}}>
                     <Card className="mb-0">
                       <CardHeader id="headingOne">
                         <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)}
@@ -153,6 +153,47 @@ class Chat extends Component {
                         </Button>
                       </CardHeader>
                       <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne"
+                                aria-labelledby="headingOne">
+                        <CardBody>
+                          <Table responsive>
+                            <thead>
+                            <tr>
+                              <th>STT</th>
+                              <th>Tên người dùng</th>
+                              <th>Tr.thái đăng nhập</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>Đang đăng nhập</td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>Đang đăng nhập</td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>Đang đăng nhập</td>
+                            </tr>
+                            </tbody>
+                          </Table>
+                        </CardBody>
+                      </Collapse>
+                    </Card>
+                  </ListGroupItem>
+                  <ListGroupItem style={{border: 'none'}}>
+                    <Card className="mb-0">
+                      <CardHeader id="headingOne">
+                        <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(1)}
+                                aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
+                          <h5 className="m-0 p-0">I66</h5>
+                        </Button>
+                      </CardHeader>
+                      <Collapse isOpen={this.state.accordion[1]} data-parent="#accordion" id="collapseOne"
                                 aria-labelledby="headingOne">
                         <CardBody>
                           <Table responsive>
