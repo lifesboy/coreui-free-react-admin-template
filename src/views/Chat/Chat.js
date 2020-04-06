@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, TabContent, TabPane, Collapse } from 'reactstrap';
+import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, Button, ListGroupItemHeading, ListGroupItemText, Row, TabContent, TabPane, Collapse } from 'reactstrap';
 import CoreUIIcons from "../Icons/CoreUIIcons/CoreUIIcons";
 
 class Chat extends Component {
@@ -125,34 +125,28 @@ class Chat extends Component {
               <CardHeader>
                 <i className="fa fa-align-justify"></i><strong>Danh bạ</strong>
               </CardHeader>
-              <Collapse isOpen={this.state.collapse} onEntering={this.onEntering} onEntered={this.onEntered} onExiting={this.onExiting} onExited={this.onExited}>
-                <CardBody>
-                  <ListGroup>
-                    <ListGroupItem>
-                      <Row>
-                        <Col>
-                          <i className="flag-icon flag-icon-ad h1" title="ad" id="ad"></i>
-                        </Col>
-                        <Col>
-                          <h2>Người dùng 1</h2>
-                          <h6>Gửi báo cáo đi</h6>
-                        </Col>
-                      </Row>
-                    </ListGroupItem>
-                    <ListGroupItem>
-                      <Row>
-                        <Col>
-                          <i className="flag-icon flag-icon-ad h1" title="ad" id="ad"></i>
-                        </Col>
-                        <Col>
-                          <h2>Tên nhóm 1</h2>
-                          <h6>anh: đã nhận được báo cáo</h6>
-                        </Col>
-                      </Row>
-                    </ListGroupItem>
-                  </ListGroup>
-                </CardBody>
-              </Collapse>
+
+              <CardBody>
+                <div id="accordion">
+
+                  <Card className="mb-0">
+                    <CardHeader id="headingOne">
+                      <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)} aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
+                        <h5 className="m-0 p-0">Collapsible Group Item #1</h5>
+                      </Button>
+                    </CardHeader>
+                    <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne">
+                      <CardBody>
+                        1. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+                        cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                        nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                        beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </CardBody>
+                    </Collapse>
+                  </Card>
+                </div>
+              </CardBody>
             </Card>
           </Col>
         </Row>
