@@ -112,24 +112,26 @@ class Chat extends Component {
                 <ListGroup style={{overflowY: 'scroll', minHeight: '500px'}}>
                   <ListGroupItem>
                     <Row>
-                      <Col className="col-sm-2">
-                        <i className="flag-icon flag-icon-ad h1" title="ad" id="ad"></i>
-                      </Col>
-                      <Col className="col-sm-10">
-                        <h2>Người dùng 1</h2>
-                        <h6>Gửi báo cáo đi</h6>
-                      </Col>
+                      <span className="col-sm-2">
+                        <i className="flag-icon flag-icon-ad h3" title="ad" id="ad"></i>
+                      </span>
+                      <h2>Người dùng 1</h2>
+                    </Row>
+                    <Row>
+                      <span className="col-sm-1"></span>
+                      <h6>Gửi báo cáo đi</h6>
                     </Row>
                   </ListGroupItem>
                   <ListGroupItem>
                     <Row>
-                      <Col className="col-sm-2">
-                        <i className="flag-icon flag-icon-ad h1" title="ad" id="ad"></i>
-                      </Col>
-                      <Col className="col-sm-10">
-                        <h2>Tên nhóm 1</h2>
-                        <h6>anh: đã nhận được báo cáo</h6>
-                      </Col>
+                      <span className="col-sm-2">
+                        <i className="flag-icon flag-icon-ad h3" title="ad" id="ad"></i>
+                      </span>
+                      <h2>Tên nhóm 1</h2>
+                    </Row>
+                    <Row>
+                      <span className="col-sm-1"></span>
+                      <h6>anh: đã nhận được báo cáo</h6>
                     </Row>
                   </ListGroupItem>
                 </ListGroup>
