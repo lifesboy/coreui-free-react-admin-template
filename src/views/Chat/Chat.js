@@ -142,6 +142,9 @@ class Chat extends Component {
             <Card>
               <CardHeader>
                 <i className="fa fa-align-justify"></i><strong>Danh bạ</strong>
+                <div className="card-header-actions">
+                  <i class="fa fa-wechat fa-lg"></i>
+                </div>
               </CardHeader>
 
               <CardBody>
