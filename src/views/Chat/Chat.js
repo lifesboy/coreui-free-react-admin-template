@@ -96,10 +96,10 @@ class Chat extends Component {
                 <ListGroup>
                   <ListGroupItem>
                     <Row>
-                      <Col>
+                      <Col className="col-sm-2">
                         <i className="flag-icon flag-icon-ad h1" title="ad" id="ad"></i>
                       </Col>
-                      <Col>
+                      <Col className="col-sm-10">
                         <h2>Người dùng 1</h2>
                         <h6>Gửi báo cáo đi</h6>
                       </Col>
@@ -107,10 +107,10 @@ class Chat extends Component {
                   </ListGroupItem>
                   <ListGroupItem>
                     <Row>
-                      <Col>
+                      <Col className="col-sm-2">
                         <i className="flag-icon flag-icon-ad h1" title="ad" id="ad"></i>
                       </Col>
-                      <Col>
+                      <Col className="col-sm-10">
                         <h2>Tên nhóm 1</h2>
                         <h6>anh: đã nhận được báo cáo</h6>
                       </Col>
