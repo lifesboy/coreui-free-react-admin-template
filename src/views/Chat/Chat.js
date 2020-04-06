@@ -154,7 +154,7 @@ class Chat extends Component {
                       <CardHeader id="headingOne">
                         <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)}
                                 aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
-                          <h5 className="m-0 p-0">I65</h5>
+                          <h6><i class="fa fa-minus-square-o fa-lg"></i>&nbsp;&nbsp;<span className="m-0 p-0">I65</span></h6>
                         </Button>
                       </CardHeader>
                       <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne"
@@ -195,7 +195,7 @@ class Chat extends Component {
                       <CardHeader id="headingOne">
                         <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(1)}
                                 aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
-                          <h5 className="m-0 p-0">I66</h5>
+                          <h6><i class="fa fa-minus-square-o fa-lg"></i>&nbsp;&nbsp;<span className="m-0 p-0">I65</span></h6>
                         </Button>
                       </CardHeader>
                       <Collapse isOpen={this.state.accordion[1]} data-parent="#accordion" id="collapseOne"
