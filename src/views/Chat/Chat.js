@@ -109,7 +109,7 @@ class Chat extends Component {
                 <i className="fa fa-align-justify"></i><strong>Tin nhắn</strong>
               </CardHeader>
               <CardBody>
-                <ListGroup>
+                <ListGroup style={{overflowY: 'scroll', minHeight: '500px'}}>
                   <ListGroupItem>
                     <Row>
                       <Col className="col-sm-2">
@@ -143,48 +143,49 @@ class Chat extends Component {
               </CardHeader>
 
               <CardBody>
-                <div id="accordion">
-
-                  <Card className="mb-0">
-                    <CardHeader id="headingOne">
-                      <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)}
-                              aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
-                        <h5 className="m-0 p-0">I65</h5>
-                      </Button>
-                    </CardHeader>
-                    <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne"
-                              aria-labelledby="headingOne">
-                      <CardBody>
-                        <Table responsive>
-                          <thead>
-                          <tr>
-                            <th>STT</th>
-                            <th>Tên người dùng</th>
-                            <th>Tr.thái đăng nhập</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>Đang đăng nhập</td>
-                          </tr>
-                          <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>Đang đăng nhập</td>
-                          </tr>
-                          <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>Đang đăng nhập</td>
-                          </tr>
-                          </tbody>
-                        </Table>
-                      </CardBody>
-                    </Collapse>
-                  </Card>
-                </div>
+                <ListGroup style={{overflowY: 'scroll', minHeight: '500px'}}>
+                  <ListGroupItem>
+                    <Card className="mb-0">
+                      <CardHeader id="headingOne">
+                        <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)}
+                                aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
+                          <h5 className="m-0 p-0">I65</h5>
+                        </Button>
+                      </CardHeader>
+                      <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne"
+                                aria-labelledby="headingOne">
+                        <CardBody>
+                          <Table responsive>
+                            <thead>
+                            <tr>
+                              <th>STT</th>
+                              <th>Tên người dùng</th>
+                              <th>Tr.thái đăng nhập</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>Đang đăng nhập</td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>Đang đăng nhập</td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>Đang đăng nhập</td>
+                            </tr>
+                            </tbody>
+                          </Table>
+                        </CardBody>
+                      </Collapse>
+                    </Card>
+                  </ListGroupItem>
+                </ListGroup>
               </CardBody>
             </Card>
           </Col>
