@@ -1,5 +1,21 @@
-import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, Button, ListGroupItemHeading, ListGroupItemText, Row, TabContent, TabPane, Collapse } from 'reactstrap';
+import React, {Component} from 'react';
+import {
+  Badge,
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  ListGroup,
+  ListGroupItem,
+  Button,
+  ListGroupItemHeading,
+  ListGroupItemText,
+  Row,
+  TabContent,
+  TabPane,
+  Table,
+  Collapse
+} from 'reactstrap';
 import CoreUIIcons from "../Icons/CoreUIIcons/CoreUIIcons";
 
 class Chat extends Component {
@@ -32,23 +48,23 @@ class Chat extends Component {
   }
 
   onEntering() {
-    this.setState({ status: 'Opening...' });
+    this.setState({status: 'Opening...'});
   }
 
   onEntered() {
-    this.setState({ status: 'Opened' });
+    this.setState({status: 'Opened'});
   }
 
   onExiting() {
-    this.setState({ status: 'Closing...' });
+    this.setState({status: 'Closing...'});
   }
 
   onExited() {
-    this.setState({ status: 'Closed' });
+    this.setState({status: 'Closed'});
   }
 
   toggle() {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState({collapse: !this.state.collapse});
   }
 
   toggleAccordion(tab) {
@@ -72,7 +88,7 @@ class Chat extends Component {
   }
 
   toggleFade() {
-    this.setState({ fadeIn: !this.state.fadeIn });
+    this.setState({fadeIn: !this.state.fadeIn});
   }
 
   toggle(tab) {
@@ -131,36 +147,40 @@ class Chat extends Component {
 
                   <Card className="mb-0">
                     <CardHeader id="headingOne">
-                      <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)} aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
+                      <Button block color="link" className="text-left m-0 p-0" onClick={() => this.toggleAccordion(0)}
+                              aria-expanded={this.state.accordion[0]} aria-controls="collapseOne">
                         <h5 className="m-0 p-0">I65</h5>
                       </Button>
                     </CardHeader>
-                    <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne" aria-labelledby="headingOne">
+                    <Collapse isOpen={this.state.accordion[0]} data-parent="#accordion" id="collapseOne"
+                              aria-labelledby="headingOne">
                       <CardBody>
-                        <table border={1}>
+                        <Table responsive>
                           <thead>
+                          <tr>
                             <th>STT</th>
                             <th>Tên người dùng</th>
                             <th>Tr.thái đăng nhập</th>
+                          </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>1</td>
-                              <td>1</td>
-                              <td>Đang đăng nhập</td>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>1</td>
-                              <td>Đang đăng nhập</td>
-                            </tr>
-                            <tr>
-                              <td>1</td>
-                              <td>1</td>
-                              <td>Đang đăng nhập</td>
-                            </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Đang đăng nhập</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Đang đăng nhập</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Đang đăng nhập</td>
+                          </tr>
                           </tbody>
-                        </table>
+                        </Table>
                       </CardBody>
                     </Collapse>
                   </Card>
